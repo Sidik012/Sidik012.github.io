@@ -204,8 +204,9 @@ export const MorphingVis: React.FC<MorphingVisProps> = ({ scrollProgress, isAnim
             <bufferAttribute attach="attributes-color" count={count} array={colors} itemSize={3} />
         </bufferGeometry>
         <pointsMaterial size={0.12} vertexColors sizeAttenuation={true} transparent={true} opacity={0.8} blending={THREE.AdditiveBlending} depthWrite={false} />
+        <pointsMaterial size={0.12} vertexColors sizeAttenuation={true} transparent={true} opacity={0.8} blending={THREE.AdditiveBlending} depthWrite={false} />
         </points>
-        <NeuralConnections animProgress={animProgress} />
+        {/* <NeuralConnections animProgress={animProgress} /> */}
     </group>
   );
 };

@@ -11,9 +11,9 @@ interface Background3DProps {
 export const Background3D: React.FC<Background3DProps> = ({ scrollProgress, isAnimating = true }) => {
   return (
     <div className="w-full h-full pointer-events-none">
-      <Canvas camera={{ position: [0, 0, 18], fov: 35 }} dpr={[1, 2]}>
+      <Canvas camera={{ position: [0, 0, 18], fov: 35 }} dpr={[1, 2]} gl={{ alpha: true }}>
         <ambientLight intensity={0.5} />
-        <Suspense fallback={null}>
+        <Suspense fallback={<div className="text-white text-xs">Loading Vis...</div>}>
            {/* The MorphingVis now handles the entire timeline from Hero to Graph */}
            <MorphingVis scrollProgress={scrollProgress} isAnimating={isAnimating} />
         </Suspense>
