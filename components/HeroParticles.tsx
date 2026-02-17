@@ -30,19 +30,11 @@ export const HeroParticles = () => {
     const time = state.clock.getElapsedTime();
     
     // Gentle rotation
-<<<<<<< HEAD
     pointsRef.current.rotation.y = time * 0.08; // slightly faster
     pointsRef.current.rotation.x = Math.sin(time * 0.15) * 0.05;
 
     // Mouse interaction simulation (wobble)
     const wobble = Math.sin(time * 0.6) * 0.15;
-=======
-    pointsRef.current.rotation.y = time * 0.05;
-    pointsRef.current.rotation.x = Math.sin(time * 0.1) * 0.05;
-
-    // Mouse interaction simulation (wobble)
-    const wobble = Math.sin(time * 0.5) * 0.1;
->>>>>>> 1d33a5efc97cccab8dda47555884f4a31ddd806b
     pointsRef.current.position.y = wobble;
   });
 
