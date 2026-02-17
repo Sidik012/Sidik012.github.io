@@ -18,10 +18,7 @@ const easeOutBounce = (t: number) => {
 
 interface MorphingVisProps {
   scrollProgress: number; // 0 to 1
-<<<<<<< HEAD
   isAnimating?: boolean;
-=======
->>>>>>> 1d33a5efc97cccab8dda47555884f4a31ddd806b
 }
 
 // Cluster centers for the MLP graph state
@@ -40,11 +37,7 @@ const connections = [
     { from: 2, to: 4, w: 0.91 }, { from: 3, to: 4, w: 0.26 }
 ];
 
-<<<<<<< HEAD
 export const MorphingVis: React.FC<MorphingVisProps> = ({ scrollProgress, isAnimating = true }) => {
-=======
-export const MorphingVis: React.FC<MorphingVisProps> = ({ scrollProgress }) => {
->>>>>>> 1d33a5efc97cccab8dda47555884f4a31ddd806b
   const meshRef = useRef<THREE.Points>(null);
   const count = 4000;
   const animProgress = useRef(0);
@@ -120,11 +113,7 @@ export const MorphingVis: React.FC<MorphingVisProps> = ({ scrollProgress }) => {
     if (!meshRef.current) return;
     const time = state.clock.getElapsedTime();
 
-<<<<<<< HEAD
     const isActive = isAnimating; // Always active independent of scroll
-=======
-    const isActive = scrollProgress > 0.02;
->>>>>>> 1d33a5efc97cccab8dda47555884f4a31ddd806b
     // Reduced speed from 0.15 to 0.05 for slower animation
     const forwardSpeed = 0.05;
     const rewindSpeed = 0.5;
