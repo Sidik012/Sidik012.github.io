@@ -17,9 +17,15 @@ export const BusinessSection = () => {
           <div className="grid md:grid-cols-2 gap-16 relative z-10">
             <div>
               <h2 className="text-accent-gold font-mono tracking-widest mb-4">ENTREPRENEURSHIP</h2>
+<<<<<<< HEAD
               <h3 className="text-4xl md:text-5xl font-bold mb-6"><span className="text-accent-gold">Cobalt</span></h3>
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
                 Bridging the gap in Niger's digital ecosystem. Cobalt provides high-end tech solutions for local enterprises.
+=======
+              <h3 className="text-4xl md:text-5xl font-bold mb-6"><span className="text-accent-gold">Super</span>Laps</h3>
+              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+                Bridging the gap in Niger's digital ecosystem. Superlaps provides high-end tech solutions for local enterprises.
+>>>>>>> 1d33a5efc97cccab8dda47555884f4a31ddd806b
               </p>
               
               <div className="grid grid-cols-2 gap-8 mb-8">
@@ -28,7 +34,15 @@ export const BusinessSection = () => {
                   <div className="flex flex-col gap-3">
                     <div className="flex items-center gap-3 group">
                        <div className="h-2 w-2 bg-accent-cyan rounded-full group-hover:shadow-[0_0_8px_rgba(0,255,255,0.6)] transition-all" />
+<<<<<<< HEAD
                        <span className="text-xl font-bold text-white group-hover:text-accent-cyan transition-colors">Volt Niger</span>
+=======
+                       <span className="text-xl font-bold text-white group-hover:text-accent-cyan transition-colors">Forvis Mazars</span>
+                    </div>
+                    <div className="flex items-center gap-3 group">
+                      <div className="h-2 w-2 bg-accent-gold rounded-full group-hover:shadow-[0_0_8px_rgba(255,215,0,0.6)] transition-all" />
+                      <span className="text-xl font-bold text-white group-hover:text-accent-gold transition-colors">Volt Niger</span>
+>>>>>>> 1d33a5efc97cccab8dda47555884f4a31ddd806b
                     </div>
                   </div>
                 </div>

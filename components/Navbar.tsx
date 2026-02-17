@@ -10,7 +10,11 @@ export const Navbar = () => {
   }, []);
 
   return (
+<<<<<<< HEAD
     <nav className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${isScrolled ? 'bg-background/80 backdrop-blur-md py-4 border-b border-white/5' : 'py-6 bg-transparent'}`}>
+=======
+    <nav className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${isScrolled ? 'bg-background/80 backdrop-blur-md py-4 border-b border-white/5' : 'bg-surface/50 backdrop-blur-sm py-2'}`}>
+>>>>>>> 1d33a5efc97cccab8dda47555884f4a31ddd806b
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         <div className="font-mono font-bold text-xl tracking-tighter text-white">
           SIDIK<span className="text-accent-cyan">.RI</span>

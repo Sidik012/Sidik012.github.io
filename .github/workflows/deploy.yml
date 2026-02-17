@@ -2,6 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
+<<<<<<< HEAD
     branches: [main]
 
 permissions:
@@ -9,10 +10,30 @@ permissions:
 
 jobs:
   build-and-deploy:
+=======
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+>>>>>>> 1d33a5efc97cccab8dda47555884f4a31ddd806b
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+<<<<<<< HEAD
 
       - name: Install and Build
         run: |
@@ -26,3 +47,25 @@ jobs:
         with:
           folder: dist # Le dossier généré par Vite
           branch: gh-pages # La branche où le site compilé sera envoyé
+=======
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "npm"
+      - name: Install dependencies
+        run: npm install
+      - name: Build
+        run: npm run build
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "./dist"
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+>>>>>>> 1d33a5efc97cccab8dda47555884f4a31ddd806b

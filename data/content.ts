@@ -30,9 +30,15 @@ export const projects: Project[] = [
 ];
 
 export const timeline: Experience[] = [
+<<<<<<< HEAD
   { id: '1', role: 'Launching MVP', company: 'Volt Niger', period: '03/2026 - Present', description: 'First MVP deployment in Niamey/Niger' },
   { id: '2', role: 'Ambassador', company: 'Volt Niger', period: '2025', description: 'Strategic partnership with Volt Niger. Scaling operations and team expansion.' },
   { id: '3', role: 'Co-Founder', company: 'Cobalt', period: '2025', description: 'Foundation of Cobalt. Initial market research' }
+=======
+  { id: '1', role: 'Co-Founder & CTO', company: 'Superlaps', period: '2026 - Present', description: 'Regional expansion across the country. Launching AI-driven SaaS products.' },
+  { id: '2', role: 'Ambassador', company: 'Volt Niger', period: '2025', description: 'Strategic partnership with Volt Niger. Scaling operations and team expansion.' },
+  { id: '3', role: 'Co-Founder & CTO', company: 'Superlaps', period: '2024', description: 'Foundation of Superlaps. Initial market research and first MVP deployment in Niamey' }
+>>>>>>> 1d33a5efc97cccab8dda47555884f4a31ddd806b
 ];
 
 export const skills = [

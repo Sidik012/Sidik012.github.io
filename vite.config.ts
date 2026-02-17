@@ -5,7 +5,11 @@ import react from '@vitejs/plugin-react';
 export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
     return {
+<<<<<<< HEAD
       base: '/', // AJOUTE CETTE LIGNE
+=======
+      base: '/',
+>>>>>>> 1d33a5efc97cccab8dda47555884f4a31ddd806b
       server: {
         port: 3000,
         host: '0.0.0.0',
@@ -19,6 +23,7 @@ export default defineConfig(({ mode }) => {
         alias: {
           '@': path.resolve(__dirname, '.'),
         }
+<<<<<<< HEAD
       },
       build: {
         outDir: 'dist',
@@ -33,3 +38,8 @@ export default defineConfig(({ mode }) => {
       }
     };
 });
+=======
+      }
+    };
+});
+>>>>>>> 1d33a5efc97cccab8dda47555884f4a31ddd806b
