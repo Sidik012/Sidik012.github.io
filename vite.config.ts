@@ -19,6 +19,17 @@ export default defineConfig(({ mode }) => {
         alias: {
           '@': path.resolve(__dirname, '.'),
         }
+      },
+      build: {
+        outDir: 'dist',
+        rollupOptions: {
+            output: {
+                manualChunks: {
+                    vendor: ['react', 'react-dom', 'framer-motion'],
+                    three: ['three', '@react-three/fiber', '@react-three/drei']
+                }
+            }
+        }
       }
     };
 });
