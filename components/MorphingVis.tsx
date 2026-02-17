@@ -204,9 +204,8 @@ export const MorphingVis: React.FC<MorphingVisProps> = ({ scrollProgress, isAnim
             <bufferAttribute attach="attributes-color" count={count} array={colors} itemSize={3} />
         </bufferGeometry>
         <pointsMaterial size={0.12} vertexColors sizeAttenuation={true} transparent={true} opacity={0.8} blending={THREE.AdditiveBlending} depthWrite={false} />
-        <pointsMaterial size={0.12} vertexColors sizeAttenuation={true} transparent={true} opacity={0.8} blending={THREE.AdditiveBlending} depthWrite={false} />
         </points>
-        {/* <NeuralConnections animProgress={animProgress} /> */}
+        <NeuralConnections animProgress={animProgress} />
     </group>
   );
 };
@@ -237,6 +236,7 @@ const NeuralConnections = ({ animProgress }: { animProgress: React.MutableRefObj
           }
       });
   
+      /*
       textsRef.current.forEach(text => {
           if (text) {
               // Troika-three-text uses fillOpacity property directly
@@ -244,6 +244,7 @@ const NeuralConnections = ({ animProgress }: { animProgress: React.MutableRefObj
               text.visible = opacity > 0.01;
           }
       });
+      */
     });
   
     return (
@@ -262,6 +263,7 @@ const NeuralConnections = ({ animProgress }: { animProgress: React.MutableRefObj
                 transparent
                 opacity={0} 
               />
+              {/*
               <Text
                 ref={(el) => { textsRef.current[i] = el; }}
                 position={[mid.x, mid.y + 0.3, mid.z]}
@@ -275,6 +277,7 @@ const NeuralConnections = ({ animProgress }: { animProgress: React.MutableRefObj
               >
                 {conn.w.toFixed(2)}
               </Text>
+              */}
             </group>
           );
         })}
