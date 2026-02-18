@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Linkedin, Github } from 'lucide-react';
+import { Mail, Linkedin, Github, Download } from 'lucide-react';
 
 export const ContactSection = () => {
   return (
@@ -27,6 +27,10 @@ export const ContactSection = () => {
           <a href="https://github.com" target="_blank" rel="noreferrer" className="flex items-center gap-3 bg-transparent border border-white/20 text-white px-8 py-4 rounded-full font-bold hover:bg-white/10 transition-colors">
             <Github size={20} />
             GitHub
+          </a>
+          <a href="/cv.pdf" download className="flex items-center gap-3 bg-accent-cyan text-background px-8 py-4 rounded-full font-bold hover:bg-accent-cyan/80 transition-colors">
+            <Download size={20} />
+            Download CV
           </a>
         </div>
       </motion.div>
