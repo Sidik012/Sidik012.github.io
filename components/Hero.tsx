@@ -21,7 +21,7 @@ export const Hero = () => {
         transition={{ duration: 1, ease: "easeOut" }}
         className="relative z-10 max-w-4xl"
       >
-        <h2 className="text-accent-cyan font-mono mb-4 text-lg tracking-widest">FUTUR DATA SCIENTIST & AI ENGINEER</h2>
+        <h2 className="text-accent-cyan font-mono mb-4 text-lg tracking-widest">FUTURE DATA SCIENTIST & AI ENGINEER</h2>
         <h1 className="text-6xl md:text-8xl font-bold tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-500">
           SIDIK
         </h1>
