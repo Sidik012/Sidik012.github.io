@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import { createPortal } from 'react-dom';
 import { Menu, X } from 'lucide-react';
 
 export const Navbar = () => {
@@ -35,14 +35,15 @@ export const Navbar = () => {
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
 
-        {/* Mobile Menu Overlay */}
-        {isMenuOpen && (
+        {/* Mobile Menu Overlay - Portaled to body to avoid clipping by backdrop-blur */}
+        {isMenuOpen && createPortal(
           <div className="fixed inset-0 bg-background/95 backdrop-blur-lg z-40 flex flex-col items-center justify-center space-y-8 text-2xl font-bold md:hidden">
             <a href="#data" onClick={() => setIsMenuOpen(false)} className="hover:text-accent-cyan transition-colors">Data & AI</a>
             <a href="#business" onClick={() => setIsMenuOpen(false)} className="hover:text-accent-gold transition-colors">Business</a>
             <a href="#skills" onClick={() => setIsMenuOpen(false)} className="hover:text-accent-violet transition-colors">Skills</a>
             <a href="#contact" onClick={() => setIsMenuOpen(false)} className="px-8 py-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors text-white">Contact</a>
-          </div>
+          </div>,
+          document.body
         )}
       </div>
     </nav>
