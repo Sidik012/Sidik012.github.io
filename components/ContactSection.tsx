@@ -30,9 +30,9 @@ export const ContactSection = () => {
           </a>
         </div>
       </motion.div>
-      <br/>
-      <footer className="absolute bottom-6 text-gray-600 text-sm font-mono">
-        © {new Date().getFullYear()} Sidik | Powered by Superlaps
+      
+      <footer className="relative mt-24 text-gray-600 text-sm font-mono">
+        © {new Date().getFullYear()} Sidik | Powered by Cobalt
       </footer>
     </section>
   );
