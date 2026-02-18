@@ -28,7 +28,7 @@ export const ContactSection = () => {
             <Github size={20} />
             GitHub
           </a>
-          <a href="/cv.pdf" download className="flex items-center gap-3 bg-accent-cyan text-background px-8 py-4 rounded-full font-bold hover:bg-accent-cyan/80 transition-colors">
+          <a href="/CV_Sidik_2026.pdf" download className="flex items-center gap-3 bg-accent-cyan text-background px-8 py-4 rounded-full font-bold hover:bg-accent-cyan/80 transition-colors">
             <Download size={20} />
             Download CV
           </a>
