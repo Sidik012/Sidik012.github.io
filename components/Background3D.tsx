@@ -11,13 +11,17 @@ interface Background3DProps {
 export const Background3D: React.FC<Background3DProps> = ({ scrollProgress, isAnimating = true }) => {
   return (
     <div className="w-full h-full pointer-events-none">
-      <Canvas camera={{ position: [0, 0, 18], fov: 35 }} dpr={[1, 2]} gl={{ alpha: true }}>
+      <Canvas 
+        camera={{ position: [0, 0, 18], fov: 35 }} 
+        dpr={[1, 1.5]} // Reduce max DPR for performance
+        gl={{ alpha: true, antialias: true, preserveDrawingBuffer: false }}
+        style={{ background: 'transparent' }}
+      >
         <ambientLight intensity={0.5} />
-        <Suspense fallback={<div className="text-white text-xs">Loading Vis...</div>}>
+        <Suspense fallback={null}>
            {/* The MorphingVis now handles the entire timeline from Hero to Graph */}
            <MorphingVis scrollProgress={scrollProgress} isAnimating={isAnimating} />
         </Suspense>
-        <Environment preset="city" />
       </Canvas>
     </div>
   );
